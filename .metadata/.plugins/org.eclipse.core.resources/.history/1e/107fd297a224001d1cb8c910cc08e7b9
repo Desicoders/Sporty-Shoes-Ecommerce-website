@@ -1,15 +1,13 @@
 insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1000,'Rebook Striped Shoes',10000,60,'RBK Showroom','Blue','Sneakers',11.0,'male');
 insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1001,'Rebook doted Shoes',7000,20,'RBK Showroom','Black and white','Chuck Taylor',9.0,'female');
-insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1005,'Rebook doted Shoes',7000,20,'RBK Showroom','Black and white','Chuck Taylor',9.0,'male');
 insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1002,'Addidas doted Shoes',3000,50,'Addidas Showroom','pinkish white','Golf shoes',8.0,'female');
 insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1003,'Nike doted Shoes',2000,30,'Nike Showroom','grey','Running shoes',8.0,'male');
 insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1004,'woodland doted Shoes',2500,90,'Woodland Showroom','Brown','Soccer shoes',6.0,'male');
-insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1006,'Nike doted Shoes',2000,30,'Nike Showroom','grey','Running shoes',8.0,'female');
 
 
 
-insert into Admins(id,name,password)values (10007,'Bhuwan Agrawal','10007');
+insert into Admins(id,name,password)values (1000,'Bhuwan Agrawal',1000);
 
 
 
-insert into Users(id,name,password)values (10002,'Bhuwan Agrawal','10002');
+insert into Users(id,name,password)values (1000,'Bhuwan Agrawal',1000);

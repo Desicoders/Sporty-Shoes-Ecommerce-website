@@ -8,8 +8,8 @@ insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,categor
 
 
 
-insert into Admins(id,name,password)values (10007,'Bhuwan Agrawal','10007');
+insert into Admins(id,name,password)values (10007,'Bhuwan Agrawal',1000);
 
 
 
-insert into Users(id,name,password)values (10002,'Bhuwan Agrawal','10002');
+insert into Users(id,name,password)values (10002,'Bhuwan Agrawal',1000);
