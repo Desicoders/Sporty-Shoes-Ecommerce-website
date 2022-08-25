@@ -12,11 +12,11 @@ public class AppConfig {
 	@Bean
 	AdminLogin adminLogin()
 	{
-		return new AdminLogin(false);
+		return new AdminLogin(false,0);
 	}
 	@Bean
 	UserLogin userLogin()
 	{
-		return new UserLogin(false);
+		return new UserLogin(false,0);
 	}
 }

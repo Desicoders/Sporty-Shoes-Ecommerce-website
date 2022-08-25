@@ -47,21 +47,21 @@ public class UserController {
 	@Autowired
 	UserLogin userLogin;
 	
-	@GetMapping("/{id}")
-	ResponseEntity<Users> getUser(@PathVariable int id)
+	@GetMapping("/")
+	ResponseEntity<Users> getUser()
 	{ 
 		if(userLogin.isUserLoggedin()==false)
 			throw new UserLoginFirst("please Login First As User");
-		return new ResponseEntity<Users>( userServiceImpl.get(id),HttpStatus.OK);
+		return new ResponseEntity<Users>( userServiceImpl.get(userLogin.getUserid()),HttpStatus.OK);
 	}
 	
-	@PostMapping("/{userid}/product/{productid}/order")
-		public ResponseEntity<EntityModel<Orders>> createOrder(@PathVariable int userid, @PathVariable int productid) throws NoSuchMethodException, SecurityException
+	@PostMapping("/product/{productid}/order")
+		public ResponseEntity<EntityModel<Orders>> createOrder( @PathVariable int productid) throws NoSuchMethodException, SecurityException
 		{
 
 		if(userLogin.isUserLoggedin()==false)
 			throw new UserLoginFirst("please Login First As User");
-		Users user=userServiceImpl.get(userid);
+		Users user=userServiceImpl.get(userLogin.getUserid());
 		
 		Products product=productServiceImpl.get(productid);
 		
@@ -74,56 +74,59 @@ public class UserController {
 		EntityModel<Orders> entityModel= EntityModel.of(order);
 		Method method=this.getClass().getMethod("getAllOrders",Integer.class);
 		method.setAccessible(true);
-		Link linktoOrders =WebMvcLinkBuilder.linkTo(method,userid).withSelfRel();;
+		Link linktoOrders =WebMvcLinkBuilder.linkTo(method,userLogin.getUserid()).withSelfRel();;
 		entityModel.add(linktoOrders);
 		
 		return new ResponseEntity<EntityModel<Orders>>(entityModel,HttpStatus.CREATED);
 		
 		}
 	
-	@GetMapping("/{userid}/order/all")
-	public ResponseEntity <List<Orders> >getAllOrders(@PathVariable Integer userid)
+	@GetMapping("/order/all")
+	public ResponseEntity <List<Orders> >getAllOrders()
 	{
 
 		if(userLogin.isUserLoggedin()==false)
 			throw new UserLoginFirst("please Login First As User");
-		Users users=userServiceImpl.get(userid);
+		Users users=userServiceImpl.get(userLogin.getUserid());
 		return new ResponseEntity<List<Orders>>(orderServiceImpl.getAllOrdersByUser(users),HttpStatus.OK);
 		
 		
 	}
-	@PatchMapping("/{userid}/update/password")
-	public ResponseEntity <String >updatePassword(@PathVariable Integer userid,@RequestBody FieldValue fielvalue)
+	@PatchMapping("/update/password")
+	public ResponseEntity <String >updatePassword(@RequestBody FieldValue fielvalue)
 	{
 
 		if(userLogin.isUserLoggedin()==false)
 			throw new UserLoginFirst("please Login First As User");
 		
-		Users users=userServiceImpl.update(userid, "password",fielvalue.getFieldValue());
+		Users users=userServiceImpl.update(userLogin.getUserid(), "password",fielvalue.getFieldValue());
 		return new ResponseEntity<String>("User's password updated",HttpStatus.OK);
 		
 		
 	}
-	@PatchMapping("/{userid}/update/name")
-	public ResponseEntity <String >updateName(@PathVariable Integer userid,@RequestBody FieldValue fielvalue)
+	@PatchMapping("/update/name")
+	public ResponseEntity <String >updateName(@RequestBody FieldValue fielvalue)
 	{
 		
-		Users users=userServiceImpl.update(userid, "name",fielvalue.getFieldValue());
+		Users users=userServiceImpl.update(userLogin.getUserid(), "name",fielvalue.getFieldValue());
 		return new ResponseEntity<String>("Username updated updated",HttpStatus.OK);
 		
 		
 	}
 	
 	@PostMapping("/signup")
-	public ResponseEntity<Users> signupUp(@RequestBody(required = true) Users users,final HttpServletRequest request)
+	public ResponseEntity<Users> signupUp(@RequestBody Users users)
 	{
 		System.out.println(users);
-		userServiceImpl.save(users);
+		users=userServiceImpl.save(users);
 		return new ResponseEntity<Users>(users,HttpStatus.CREATED);
 	}
 	@GetMapping("/signout")
 	public ResponseEntity<String> Signout()
 	{
+		if(userLogin.isUserLoggedin()==false)
+			throw new UserLoginFirst("please Login First As User");
+		
 			userLogin.setUserLoggedin(false);
 		return new ResponseEntity<String>("User signed Out sucsessfully",HttpStatus.OK);
 	}
@@ -134,6 +137,7 @@ public class UserController {
 		Users user2= userServiceImpl.get(user.getId());
 		if(user2.getPassword().equals(user.getPassword()))
 		  {
+			userLogin.setUserid(user.getId());
 			userLogin.setUserLoggedin(true);
 			return new ResponseEntity<String>("User logged in sucessfully",HttpStatus.OK);
 		  }

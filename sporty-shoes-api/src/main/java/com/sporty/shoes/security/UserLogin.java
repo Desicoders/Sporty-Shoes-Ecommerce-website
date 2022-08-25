@@ -5,8 +5,10 @@ import lombok.Data;
 @Data
 public class UserLogin {
 	boolean userLoggedin;
-	public UserLogin(boolean b){
+	int userid;
+	public UserLogin(boolean b,int userid){
 		this.userLoggedin=b;
+		this.userid=userid;
 	}
 
 }

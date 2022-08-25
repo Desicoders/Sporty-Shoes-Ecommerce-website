@@ -17,11 +17,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.sporty.shoes.enteties.FieldValue;
-import com.sporty.shoes.enteties.Orders;
 import com.sporty.shoes.enteties.Products;
 import com.sporty.shoes.exceptions.AdminLoginFirstException;
 import com.sporty.shoes.security.AdminLogin;
@@ -39,17 +37,17 @@ public class ProductsController {
 
 	@GetMapping("/all")
 	public ResponseEntity<List<Products>> getAllProducts() {
-		return new ResponseEntity(productServiceImpl.getAll(), HttpStatus.OK);
+		return new ResponseEntity<List<Products>>(productServiceImpl.getAll(), HttpStatus.OK);
 	}
 
 	@GetMapping("/allGroupedByCategories")
 	public ResponseEntity<List<Products>> getAllProductsgroupedByCategories() {
-		return new ResponseEntity(productServiceImpl.getAllBygroupedByCategory(), HttpStatus.OK);
+		return new ResponseEntity<List<Products>>(productServiceImpl.getAllBygroupedByCategory(), HttpStatus.OK);
 	}
 
 	@GetMapping("/searchByName")
 	public ResponseEntity<List<Products>> getAllProductsByName(@RequestParam("name") String name) {
-		return new ResponseEntity(productServiceImpl.getAllByName(name), HttpStatus.OK);
+		return new ResponseEntity<List<Products>>(productServiceImpl.getAllByName(name), HttpStatus.OK);
 	}
 
 	@GetMapping("/{id}")

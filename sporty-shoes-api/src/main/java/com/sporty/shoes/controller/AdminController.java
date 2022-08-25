@@ -63,6 +63,7 @@ public class AdminController {
 		Admins admins2= adminServiceImpl.get(admins.getId());
 		if(admins2.getPassword().equals(admins2.getPassword()))
 		  {
+			adminLogin.setAdminid(admins.getId());
 			adminLogin.setAdminLoggedin(true);
 			return new ResponseEntity<String>("Admin logged in sucessfully",HttpStatus.OK);
 		  }
