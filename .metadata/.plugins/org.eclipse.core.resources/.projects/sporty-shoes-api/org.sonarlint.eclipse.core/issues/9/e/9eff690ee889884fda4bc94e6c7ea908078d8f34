@@ -1,0 +1,6 @@
+
+E
+java:S1700"Rename field "FieldValue"(Ü·¢ìH›RMAJORZ
+CODE_SMELL
+€	java:S116"URename this field "FieldValue" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ü·¢ìHœRMINORZ
+CODE_SMELL

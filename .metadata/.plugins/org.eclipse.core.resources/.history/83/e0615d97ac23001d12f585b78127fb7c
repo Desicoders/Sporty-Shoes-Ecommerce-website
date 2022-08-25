@@ -1,0 +1,12 @@
+package com.sporty.shoes.security;
+
+import lombok.Data;
+
+@Data
+public class UserLogin {
+	boolean UserLoggedin;
+	public UserLogin(boolean b){
+		this.hasUserLoggedin=b;
+	}
+
+}

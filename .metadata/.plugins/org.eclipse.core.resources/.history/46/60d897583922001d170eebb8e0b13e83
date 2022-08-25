@@ -1,0 +1,25 @@
+package com.sporty.shoes.enteties;
+
+import lombok.Getter;
+
+@Getter
+public enum Gender {
+	Male("male"), Female("female");
+    private String code;
+
+    private static Map<String, gender=""> genderMap;
+
+	Gender(String code) {
+		this.code = code;
+	}
+	
+	public static Gender getGender(String code) {
+        if (genderMap == null) {
+            genderMap = new HashMap<String,Gender>();
+            genderMap.put(1, Gender.MALE);
+            genderMap.put(2, Gender.FEMALE);
+        }
+        return genderMap.get(code);
+    }
+
+}

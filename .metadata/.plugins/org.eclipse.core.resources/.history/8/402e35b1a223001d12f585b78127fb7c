@@ -1,0 +1,6 @@
+package com.sporty.shoes.enteties;
+
+public enum Eroles {
+	Role_User,
+	Role_Admin
+}

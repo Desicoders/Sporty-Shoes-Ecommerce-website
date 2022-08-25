@@ -1,0 +1,14 @@
+
+q
+java:S1128	">Remove this unused import 'org.apache.el.util.ReflectionUtil'.(º³ì˜8à¡ŸÒ¬0HŠ	RMINORZ
+CODE_SMELL
+X
+java:S3011<",This accessibility update should be removed.(˜ÂÓ˜H‹RMAJORZ
+CODE_SMELL
+h
+java:S2259<"CA "NullPointerException" could be thrown; "field" is nullable here.(˜ÂÓ˜H‡RMAJORZBUG
+	java:S1178"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.( „¡ÒþÿÿÿÿH†RMINORZ
+CODE_SMELL
+|
+java:S1128"DRemove this unused import 'com.sporty.shoes.Repositry.ProductsRepo'.(ƒí½¡ÿÿÿÿÿ8§ÅŽÓ¬0H·	RMINORZ
+CODE_SMELL

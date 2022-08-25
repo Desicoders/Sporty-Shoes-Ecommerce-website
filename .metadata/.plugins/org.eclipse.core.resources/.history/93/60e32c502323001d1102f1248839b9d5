@@ -1,0 +1,26 @@
+package com.sporty.shoes.listner;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+
+import com.sporty.shoes.enteties.Users;
+import com.sporty.shoes.event.SignupCompleteEvent;
+import com.sporty.shoes.service.UserServiceImpl;
+
+public class SignUpCompleteEventListner implements ApplicationListener<SignupCompleteEvent> {
+
+	@Autowired
+	private UserServiceImpl userServiceImpl;
+	@Override
+	public void onApplicationEvent(SignupCompleteEvent event) {
+		Users user=event.getUser();
+		String token=UUID.randomUUID().toString();
+		userServiceImpl.saveVerificationTokenForUser(user,token);
+		
+		
+		
+	}
+
+}

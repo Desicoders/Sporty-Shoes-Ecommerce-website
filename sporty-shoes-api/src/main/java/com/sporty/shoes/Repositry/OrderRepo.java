@@ -1,0 +1,16 @@
+package com.sporty.shoes.Repositry;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.sporty.shoes.enteties.Orders;
+import com.sporty.shoes.enteties.Products;
+import com.sporty.shoes.enteties.Users;
+@Repository
+public interface OrderRepo extends JpaRepository<Orders,Integer> {
+	List<Orders> findByUsers(Users users );
+	List<Orders> findByProduct(Products products);
+
+}

@@ -1,0 +1,11 @@
+package com.sporty.shoes.enteties;
+
+public enum Gender {
+Male("male"),Female("female");
+	private String code;
+	
+	
+Gender(String string) {
+}
+
+}

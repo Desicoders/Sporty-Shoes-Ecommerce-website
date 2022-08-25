@@ -1,0 +1,5 @@
+package com.sporty.shoes.Repositry;
+
+public interface VerificationTokenRepo {
+
+}

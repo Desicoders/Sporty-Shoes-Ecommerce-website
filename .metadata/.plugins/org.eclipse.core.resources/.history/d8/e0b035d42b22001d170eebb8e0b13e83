@@ -1,0 +1,2 @@
+insert into Products(id,name,mrp,quantity_In_Stock,product_vendor) values(1000,'parle Biscuits',10.00,60,'Parle distributers');
+

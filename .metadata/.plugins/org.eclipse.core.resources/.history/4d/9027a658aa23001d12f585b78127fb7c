@@ -1,0 +1,11 @@
+package com.sporty.shoes.security;
+
+public class AdminLogin {
+
+	boolean hasAdminLoggedin;
+	
+	public AdminLogin(boolean b) {
+        this.hasAdminLoggedin=b;
+	}
+
+}

@@ -1,0 +1,26 @@
+package com.sporty.shoes.security;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
+
+import com.sporty.shoes.Repositry.UserRepo;
+import com.sporty.shoes.enteties.Users;
+
+public class UserDetailsServiceImpl implements UserDetailsService{
+
+	@Autowired
+	UserRepo userRepo;
+	
+	@Override
+	@Transactional
+	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		Users user=userRepo.findByName(username).
+				orElseThrow(() -> new UsernameNotFoundException("User not found with name = "+username));
+		return UserDetailsImpl.build(user);
+	}
+
+}

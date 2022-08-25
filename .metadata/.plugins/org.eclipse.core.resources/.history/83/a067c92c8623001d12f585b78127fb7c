@@ -1,0 +1,54 @@
+package com.sporty.shoes.enteties;
+
+import java.util.HashSet;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.Size;
+
+import org.hibernate.annotations.ManyToAny;
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.EqualsAndHashCode;
+import lombok.NoArgsConstructor;
+import lombok.ToString;
+
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
+@Entity
+@ToString
+public class Users {
+
+    @EqualsAndHashCode.Include
+	@Id
+	@GeneratedValue(strategy = GenerationType.AUTO)
+	int id;
+    @NotBlank
+    @Size(max=20)
+	String name;
+    
+    @Size(max=120)
+	String password;
+    
+    @Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    Eroles eroles;
+    
+    @ManyToAny
+    @JoinTable(name="user_roles",joinColumns = @JoinColumn(name="user_id"),
+    inverseJoinColumns = @JoinColumn(name="role_id"))
+    Set<Role> roles=new HashSet<>();	
+}

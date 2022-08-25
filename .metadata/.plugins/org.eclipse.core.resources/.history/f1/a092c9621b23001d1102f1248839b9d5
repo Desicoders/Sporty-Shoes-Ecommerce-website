@@ -1,0 +1,12 @@
+package com.sporty.shoes.event;
+
+import org.springframework.context.ApplicationEvent;
+
+public class SignupCompleteEvent extends ApplicationEvent {
+
+	public SignupCompleteEvent(User source,String ApplicationUrl) {
+		super(source);
+	}
+
+	
+}

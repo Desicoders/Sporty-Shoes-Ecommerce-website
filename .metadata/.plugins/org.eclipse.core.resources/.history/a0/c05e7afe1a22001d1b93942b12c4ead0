@@ -1,0 +1,39 @@
+package com.sporty.shoes.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sporty.shoes.Repositry.UserRepo;
+import com.sporty.shoes.enteties.Users;
+import com.sporty.shoes.exceptions.UserNotFoundException;
+
+public class UserServiceImpl implements Service<Users>{
+
+	@Autowired
+	UserRepo userRepo;
+	
+	
+	@Override
+	public List<Users> getAll() {
+		return userRepo.findAll();
+	}
+
+	@Override
+	public Users get(int id) {
+		return userRepo.findById(id).orElseThrow(() -> new UserNotFoundException("no user with id = "+id));
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public void update(int id, String fieldname, Object FieldValue) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

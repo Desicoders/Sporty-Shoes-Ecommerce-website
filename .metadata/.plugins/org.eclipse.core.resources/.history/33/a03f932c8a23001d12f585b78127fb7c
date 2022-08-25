@@ -1,0 +1,5 @@
+package com.sporty.shoes.security;
+
+public class UserDetailsImpl {
+
+}

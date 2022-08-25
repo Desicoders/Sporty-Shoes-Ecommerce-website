@@ -1,0 +1,32 @@
+package com.sporty.shoes.listner;
+
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.stereotype.Component;
+
+import com.sporty.shoes.enteties.Users;
+import com.sporty.shoes.event.SignupCompleteEvent;
+import com.sporty.shoes.service.UserServiceImpl;
+
+import lombok.extern.slf4j.Slf4j;
+@Slf4j
+@Component
+public class SignUpCompleteEventListner implements ApplicationListener<SignupCompleteEvent> {
+
+	
+	@Autowired
+	private UserServiceImpl userServiceImpl;
+	@Override
+	public void onApplicationEvent(SignupCompleteEvent event) {
+		Users user=event.getUser();
+		String token=UUID.randomUUID().toString();
+		userServiceImpl.saveVerificationTokenForUser(user,token);
+		
+		//Send Mail to user
+		String url=event.getApplicationUrl()+"/verifyRegestration?token="+token;
+		log.info("Click the link to verify your account: {} ",url);
+	}
+
+}

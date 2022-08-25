@@ -1,0 +1,19 @@
+package listner;
+
+import java.util.UUID;
+
+import org.springframework.context.ApplicationListener;
+
+import com.sporty.shoes.enteties.Users;
+import com.sporty.shoes.event.SignupCompleteEvent;
+
+public class SignUpCompleteEventListner implements ApplicationListener<SignupCompleteEvent> {
+
+	@Override
+	public void onApplicationEvent(SignupCompleteEvent event) {
+		Users user=event.getUser();
+		String token=UUID.randomUUID().toString();
+		
+	}
+
+}

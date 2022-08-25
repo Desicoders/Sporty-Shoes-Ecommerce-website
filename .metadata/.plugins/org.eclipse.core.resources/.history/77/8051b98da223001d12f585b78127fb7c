@@ -1,0 +1,62 @@
+package com.sporty.shoes.config;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.security.authentication.AuthenticationManager;
+import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
+import org.springframework.security.config.annotation.web.WebSecurityConfigurer;
+import org.springframework.security.config.annotation.web.builders.HttpSecurity;
+import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
+import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.AuthenticationEntryPoint;
+import org.springframework.security.web.SecurityFilterChain;
+
+import com.sporty.shoes.security.UserDetailsServiceImpl;
+@Configuration
+@EnableWebSecurity
+@EnableGlobalMethodSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter{
+
+	@Autowired
+	private UserDetailsServiceImpl userDetailsServiceImpl; 
+	
+	
+	private static final String[] WhiteListedUrls= {
+			"/users/signup","/h2-console/**",
+			// -- Swagger UI v2
+	        "/v2/api-docs",
+	        "/swagger-resources",
+	        "/swagger-resources/**",
+	        "/configuration/ui",
+	        "/configuration/security",
+	        "/swagger-ui.html",
+	        "/webjars/**",
+	        // -- Swagger UI v3 (OpenAPI)
+	        "/v3/api-docs/**",
+	        "/swagger-ui/**",
+	        // other public endpoints
+	        "/h2-console/**",
+	};
+	
+	@Bean
+	public PasswordEncoder passwordEncoder()
+	{
+		return new BCryptPasswordEncoder(11);
+	}
+	@Bean
+	SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception
+	{
+		http.cors().and().csrf().disable().authorizeHttpRequests()
+		.antMatchers(WhiteListedUrls).permitAll();
+	    http.headers().frameOptions().disable();
+
+		return http.build();
+	}
+	@Bean
+	public AuthenticationManager authenticationManager() throws Exception{
+		return super.authenticationManager();
+	}
+}

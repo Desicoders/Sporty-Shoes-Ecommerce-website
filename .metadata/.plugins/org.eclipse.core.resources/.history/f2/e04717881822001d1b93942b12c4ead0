@@ -1,0 +1,5 @@
+package com.sporty.shoes.service;
+
+public class UserServiceImpl {
+
+}

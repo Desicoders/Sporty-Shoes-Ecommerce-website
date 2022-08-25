@@ -1,0 +1,15 @@
+package com.sporty.shoes.enteties;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+import javax.persistence.Table;
+@Entity
+@Table(name="roles")
+public class Role {
+
+	@Enumerated(EnumType.STRING)
+    @Column(length = 20)
+    Eroles eroles;
+}

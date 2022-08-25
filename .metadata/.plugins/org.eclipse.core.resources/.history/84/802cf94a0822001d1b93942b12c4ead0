@@ -1,0 +1,42 @@
+package com.sporty.shoes.Service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+
+import com.sporty.shoes.Repositry.ProductsRepo;
+import com.sporty.shoes.enteties.Products;
+import com.sporty.shoes.exceptions.ProductNotFoundException;
+@org.springframework.stereotype.Service
+public class ProductServiceImpl implements Service<Products> {
+
+	
+	@Autowired
+	ProductsRepo productsRepo;
+	
+	@Override
+	
+	public List<Products> getAll() {
+		// TODO Auto-generated method stub
+		return productsRepo.findAll();
+	}
+
+	@Override
+	public Products get(int id) {
+		// TODO Auto-generated method stub
+		return productsRepo.findById(id).orElseThrow(() -> new ProductNotFoundException("No Product with id "+id));
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+
+	}
+
+	@Override
+	public void update(int id, String fieldname, Object FieldValue) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

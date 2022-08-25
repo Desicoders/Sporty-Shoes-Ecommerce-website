@@ -1,0 +1,33 @@
+package com.sporty.shoes.enteties;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.CreationTimestamp;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
+public class Orders {
+
+	@Id
+	int id;
+	
+	@OneToOne
+	Products product;
+	
+	@OneToOne
+	Users users;
+	
+	@CreationTimestamp
+	LocalDateTime orderDate;
+	
+	
+}

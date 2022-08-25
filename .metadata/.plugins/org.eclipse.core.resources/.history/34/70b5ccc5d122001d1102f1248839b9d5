@@ -1,0 +1,8 @@
+package com.sporty.shoes.exceptions;
+
+public class WrongOrderDirectionException extends Exception {
+
+	public WrongOrderDirectionException(String msg) {
+		super(msg);
+	}
+}

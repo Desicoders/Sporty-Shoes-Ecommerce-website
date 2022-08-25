@@ -1,0 +1,13 @@
+package com.sporty.shoes.Repositry;
+
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.sporty.shoes.enteties.Eroles;
+import com.sporty.shoes.enteties.Role;
+
+public interface RoleRepo extends JpaRepository<Role, Long>{
+
+	Optional<Role>finbByName(Eroles name);
+}

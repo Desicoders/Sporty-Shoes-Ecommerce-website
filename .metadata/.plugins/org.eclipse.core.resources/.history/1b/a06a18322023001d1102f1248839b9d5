@@ -1,0 +1,49 @@
+package com.sporty.shoes.enteties;
+
+import java.util.Calendar;
+import java.util.Date;
+
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+@Entity
+@Data
+@NoArgsConstructor
+public class VericicationToken {
+	
+	private static final int Expiration_Time=11;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private int id;
+	
+	
+	private String token;
+	
+	private Date expirationTime;
+	
+	@OneToOne(fetch=FetchType.EAGER)
+	private Users user;
+	
+	VericicationToken(Users user,String token)
+	{
+		this.token=token;
+		this.user=user;
+		this.expirationTime=calculateExpirationTime(Expiration_Time);
+	}
+
+	private Date calculateExpirationTime(int expirationTime2) {
+		// TODO Auto-generated method stub
+		Calendar calendar=Calendar.getInstance();
+		calendar.setTimeInMillis(new Date().getTime());
+		calendar.add(Calendar.MINUTE, expirationTime2);
+		return new Date(calendar.getTime().getTime());
+	}
+
+}

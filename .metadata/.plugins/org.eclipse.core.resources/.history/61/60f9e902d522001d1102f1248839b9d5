@@ -1,0 +1,38 @@
+package com.sporty.shoes.controller;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort.Direction;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import com.sporty.shoes.enteties.Orders;
+import com.sporty.shoes.exceptions.WrongOrderDirectionException;
+import com.sporty.shoes.service.OrderServiceImpl;
+
+@Repository
+@RequestMapping("/orders")
+public class OrderController {
+	
+	@Autowired
+	OrderServiceImpl orderServiceImpl;
+	
+	@GetMapping("/all/sorted")
+	ResponseEntity<List<Orders>> getAllOrdersByfieldWithDirection(@RequestParam String key,@RequestParam String ordering) throws WrongOrderDirectionException{
+		if(ordering.equals("asc"))
+			return new ResponseEntity<List<Orders>>(
+					orderServiceImpl.getAllOrderedByFieldWithDirn(Direction.ASC, key)
+					,HttpStatus.OK);
+		else if(ordering.equals("desc"))
+			return new ResponseEntity<List<Orders>>(
+					orderServiceImpl.getAllOrderedByFieldWithDirn(Direction.DESC, key)
+					,HttpStatus.OK);
+		else throw new WrongOrderDirectionException("Direction Order can be only asc or desc");
+	}
+
+}

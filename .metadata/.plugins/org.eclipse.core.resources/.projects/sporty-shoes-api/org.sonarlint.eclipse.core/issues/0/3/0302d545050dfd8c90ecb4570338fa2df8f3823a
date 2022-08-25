@@ -1,0 +1,8 @@
+
+_
+java:S3011/",This accessibility update should be removed.(˜ÂÓ˜8•œžÎ¬0HíRMAJORZ
+CODE_SMELL
+ƒ	java:S117,"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•Õòþ8ÌÄ…Î¬0HèRMINORZ
+CODE_SMELL
+o
+java:S2259/"CA "NullPointerException" could be thrown; "field" is nullable here.(˜ÂÓ˜8•œžÎ¬0HéRMAJORZBUG

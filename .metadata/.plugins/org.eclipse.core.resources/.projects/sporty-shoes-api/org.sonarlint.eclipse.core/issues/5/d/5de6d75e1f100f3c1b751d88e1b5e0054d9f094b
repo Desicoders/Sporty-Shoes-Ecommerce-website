@@ -1,0 +1,39 @@
+
+‘
+java:S2293C"YReplace the type specification in this constructor call with the diamond operator ("<>").(è™°Çûÿÿÿÿ8°õ›€­0HŒRMINORZ
+CODE_SMELL
+€	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÜê¥8¾µ¹€­0HÎRMINORZ
+CODE_SMELL
+‘
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(©ÍÖçşÿÿÿÿ8¬Ç´€­0H½RMINORZ
+CODE_SMELL
+Œ
+java:S2293E"YReplace the type specification in this constructor call with the diamond operator ("<>").(•üÜ8œ¢¥Î¬0HˆRMINORZ
+CODE_SMELL
+_
+java:S1125."'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8ÆË¨ÿ¬0H»RMINORZ
+CODE_SMELL
+‘
+java:S22939"YReplace the type specification in this constructor call with the diamond operator ("<>").( ´ìóÿÿÿÿÿ8èğÒÎ¬0HŠRMINORZ
+CODE_SMELL
+_
+java:S11256"'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8Ó¨­ÿ¬0HÕRMINORZ
+CODE_SMELL
+‘
+java:S2293K"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ùñµåûÿÿÿÿ8°õ›€­0HRMINORZ
+CODE_SMELL
+‘
+java:S22931"YReplace the type specification in this constructor call with the diamond operator ("<>").(âö¹ªúÿÿÿÿ8•ùÌÏ¬0HRMINORZ
+CODE_SMELL
+
+java:S1192'"UDefine a constant instead of duplicating this literal "Login As Admin First" 3 times.(Üüéûÿÿÿÿ8Ó¨­ÿ¬0HÑRCRITICALZ
+CODE_SMELL
+	java:S100="NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ã“à8°õ›€­0HRMINORZ
+CODE_SMELL
+x
+java:S4684="@Replace this persistent entity with a simple POJO or DTO object.(ã“à8°õ›€­0H‘RCRITICALZVULNERABILITY
+q
+java:S1764@"ECorrect one of the identical sub-expressions on both sides of equals.(ø×Ê–8°õ›€­0H’RMAJORZBUG
+_
+java:S1125&"'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8ô¤ªÿ¬0HÅRMINORZ
+CODE_SMELL

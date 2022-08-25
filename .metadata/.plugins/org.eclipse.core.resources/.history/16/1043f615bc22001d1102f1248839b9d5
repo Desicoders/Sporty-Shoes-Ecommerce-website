@@ -1,0 +1,47 @@
+package com.sporty.shoes.service;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.sporty.shoes.Repositry.AdminRepo;
+import com.sporty.shoes.enteties.Admins;
+import com.sporty.shoes.exceptions.AdminNotFoundException;
+
+@Service
+public class AdminServiceImpl implements com.sporty.shoes.service.Service<Admins> {
+	
+	@Autowired
+	AdminRepo adminRepo;
+
+	@Override
+	public Admins save(Admins obj) {
+		return adminRepo.saveAndFlush(obj);
+	}
+
+	@Override
+	public List<Admins> getAll() {
+		
+		return adminRepo.findAll();
+	}
+
+	@Override
+	public Admins get(int id) {
+		
+		return adminRepo.findById(id).orElseThrow(() -> new AdminNotFoundException("No Admin with id = "+id));
+	}
+
+	@Override
+	public void delete(int id) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	public Admins update(int id, String fieldname, Object FieldValue) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+}

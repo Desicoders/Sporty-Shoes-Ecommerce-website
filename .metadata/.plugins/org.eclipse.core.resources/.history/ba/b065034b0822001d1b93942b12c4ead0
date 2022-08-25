@@ -1,0 +1,11 @@
+package com.sporty.shoes.Service;
+
+import java.util.List;
+
+public interface Service<E> {
+	List <E> getAll();
+	E get(int id);
+	void delete(int id);
+	void update(int id,String fieldname,Object FieldValue); 
+
+}

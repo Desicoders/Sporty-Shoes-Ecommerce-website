@@ -1,0 +1,2 @@
+insert into Products(id,name,mrp,quantity_In_Stock,product_vendor,colour,category,size,gender) values(1000,'Rebook Striped Shoes',10000,60,'Parle distributers','Blue','Sneakers',11.0,'male');
+insert into users (id, name,pass) values (1234,'Bhuwan Agrawal','root');

@@ -1,0 +1,14 @@
+package com.sporty.shoes.Repositry;
+
+import java.util.List;
+import java.util.Optional;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import com.sporty.shoes.enteties.Users;
+@Repository
+public interface UserRepo extends JpaRepository<Users, Integer>{
+
+	List<Users> findByNameContaining(String name);
+}
