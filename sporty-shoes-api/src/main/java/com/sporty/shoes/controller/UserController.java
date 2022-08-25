@@ -117,6 +117,9 @@ public class UserController {
 	@PostMapping("/signup")
 	public ResponseEntity<Users> signupUp(@RequestBody Users users)
 	{
+		if(userLogin.isUserLoggedin()==true)
+			throw new UserLoginFirst("please logout first as a userss");
+		
 		System.out.println(users);
 		users=userServiceImpl.save(users);
 		return new ResponseEntity<Users>(users,HttpStatus.CREATED);

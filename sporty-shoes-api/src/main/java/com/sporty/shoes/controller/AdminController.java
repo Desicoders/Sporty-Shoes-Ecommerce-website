@@ -33,11 +33,11 @@ public class AdminController {
 	@Autowired
 	AdminLogin adminLogin;
 
-	@PatchMapping("/{adminid}/update/password")
-	public ResponseEntity<String> updatePassword(@PathVariable Integer adminid, @RequestBody FieldValue fielvalue) {
+	@PatchMapping("/update/password")
+	public ResponseEntity<String> updatePassword(@RequestBody FieldValue fielvalue) {
 		if (adminLogin.isAdminLoggedin() == false)
 			throw new AdminLoginFirstException("Login As Admin First");
-		adminServiceImpl.update(adminid, "password", fielvalue.getFieldValue());
+		adminServiceImpl.update(adminLogin.getAdminid(), "password", fielvalue.getFieldValue());
 		return new ResponseEntity<String>("Admin password  updated sucessfully", HttpStatus.OK);
 	}
 
