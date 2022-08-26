@@ -1,74 +1,83 @@
 
-Š
-java:S2293z"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÎùA8†ößÕ¬0HÎRMINORZ
+p	java:S106{"9Replace this use of System.out or System.err by a logger.(´ûüÿÿÿÿ8˜¾›ä¬0Hæ&RMAJORZ
 CODE_SMELL
 ‘
-java:S2293g"YReplace the type specification in this constructor call with the diamond operator ("<>").(ê¨™àşÿÿÿÿ8–ğÊ¬0HÇRMINORZ
+java:S2293g"YReplace the type specification in this constructor call with the diamond operator ("<>").(ê¨™àşÿÿÿÿ8–ğÊ¬0Hà&RMINORZ
 CODE_SMELL
-]
-java:S1481o"*Remove this unused "users" local variable.(¢÷±¡8å³Ë¬0HÌRMINORZ
+Š
+java:S2293}"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÎùA8†ößÕ¬0Hì&RMINORZ
+CODE_SMELL
+k
+java:S1854o"9Remove this useless assignment to local variable "users".(£æ©?8å³Ë¬0Hù&RMAJORZ
 CODE_SMELL
 z
-java:S4684„"@Replace this persistent entity with a simple POJO or DTO object.(Ñ¡ğ8âÆÑ€­0HRCRITICALZVULNERABILITY
-Œ
-java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(“èÜá8ëˆÉ¬0HÊRMINORZ
-CODE_SMELL
-
-java:S2293Š"YReplace the type specification in this constructor call with the diamond operator ("<>").(èÚ„®8âÆÑ€­0HŠRMINORZ
-CODE_SMELL
-y
-java:S4684v"@Replace this persistent entity with a simple POJO or DTO object.(î×‚8†ößÕ¬0HÅRCRITICALZVULNERABILITY
-l
-java:S1854f"9Remove this useless assignment to local variable "users".(×¨¨õ8–ğÊ¬0H¹RMAJORZ
-CODE_SMELL
-T
-java:S1116M"Remove this empty statement.( ‚Õêşÿÿÿÿ8ëˆÉ¬0HÀRMINORZ
-CODE_SMELL
-	java:S100„"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ¡ğ8âÆÑ€­0HRMINORZ
-CODE_SMELL
+java:S4684Š"@Replace this persistent entity with a simple POJO or DTO object.(Ñ¡ğ8âÆÑ€­0HÑ&RCRITICALZVULNERABILITY
 ‘
-java:S2293p"YReplace the type specification in this constructor call with the diamond operator ("<>").(…®¬üÿÿÿÿ8å³Ë¬0H¾RMINORZ
+java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÉîìÇşÿÿÿÿ8ëˆÉ¬0Hç&RMINORZ
 CODE_SMELL
-l
-java:S1854o"9Remove this useless assignment to local variable "users".(¢÷±¡8å³Ë¬0HÄRMAJORZ
+	java:S100Š"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ñ¡ğ8âÆÑ€­0HÛ&RMINORZ
 CODE_SMELL
-]
-java:S1481f"*Remove this unused "users" local variable.(×¨¨õ8–ğÊ¬0HÂRMINORZ
-CODE_SMELL
-Y
-java:S1125c"'Remove the unnecessary boolean literal.(ü‹Ø@8ÑëÏÿ¬0H¹RMINORZ
-CODE_SMELL
-–
-java:S11926"[Define a constant instead of duplicating this literal "please Login First As User" 4 times.(ò´¸òüÿÿÿÿ8™âÎÿ¬0HRCRITICALZ
-CODE_SMELL
-Y
-java:S1125X"'Remove the unnecessary boolean literal.(ü‹Ø@8ØšÎÿ¬0HˆRMINORZ
-CODE_SMELL
-€	java:S100}"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÜê¥8Ì„¾€­0HèRMINORZ
-CODE_SMELL
-‘
-java:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(´·Åşûÿÿÿÿ8å®İ¬¬0H·RMINORZ
-CODE_SMELL
-
-java:S2293Œ"YReplace the type specification in this constructor call with the diamond operator ("<>").(•üÜ8âÆÑ€­0HŒRMINORZ
-CODE_SMELL
-Y
-java:S11255"'Remove the unnecessary boolean literal.(ü‹Ø@8ØšÎÿ¬0H‹RMINORZ
+\
+java:S1481o"*Remove this unused "users" local variable.(£æ©?8å³Ë¬0Hä&RMINORZ
 CODE_SMELL
 _
-java:S3011L",This accessibility update should be removed.(Ó«§¯8ëˆÉ¬0HÉRMAJORZ
-CODE_SMELL
-p
-java:S1128"=Remove this unused import 'com.sporty.shoes.enteties.Admins'.(¾ª²8âÆÑ€­0HRMINORZ
+java:S3011L",This accessibility update should be removed.(Ó«§¯8ëˆÉ¬0Hß&RMAJORZ
 CODE_SMELL
 Y
-java:S1125>"'Remove the unnecessary boolean literal.(ü‹Ø@8™âÎÿ¬0H¡RMINORZ
-CODE_SMELL
-p	java:S106x"9Replace this use of System.out or System.err by a logger.(´ûüÿÿÿÿ8˜¾›ä¬0HÆRMAJORZ
+java:S1125X"'Remove the unnecessary boolean literal.(ü‹Ø@8ØšÎÿ¬0Hî&RMINORZ
 CODE_SMELL
 ‘
-java:S2293P"YReplace the type specification in this constructor call with the diamond operator ("<>").(ÉîìÇşÿÿÿÿ8ëˆÉ¬0HºRMINORZ
+java:S2293p"YReplace the type specification in this constructor call with the diamond operator ("<>").(…®¬üÿÿÿÿ8å³Ë¬0Hÿ&RMINORZ
+CODE_SMELL
+Y
+java:S1125c"'Remove the unnecessary boolean literal.(ü‹Ø@8ÑëÏÿ¬0Hñ&RMINORZ
+CODE_SMELL
+u
+java:S1128"BRemove this unused import 'javax.servlet.http.HttpServletRequest'.(ø©¹…8˜—„µ­0H§)RMINORZ
+CODE_SMELL
+l
+java:S1854f"9Remove this useless assignment to local variable "users".(‚§™¶8–ğÊ¬0Hú&RMAJORZ
+CODE_SMELL
+p
+java:S1128"=Remove this unused import 'com.sporty.shoes.enteties.Admins'.(¾ª²8ù¦Æ´­0H²(RMINORZ
 CODE_SMELL
 
-java:S2293€"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñ› ë8Ì„¾€­0HæRMINORZ
+java:S2293†"YReplace the type specification in this constructor call with the diamond operator ("<>").(ñ› ë8Ì„¾€­0Hê&RMINORZ
+CODE_SMELL
+Y
+java:S1125>"'Remove the unnecessary boolean literal.(ü‹Ø@8™âÎÿ¬0HÜ&RMINORZ
+CODE_SMELL
+
+java:S2293“"YReplace the type specification in this constructor call with the diamond operator ("<>").(•üÜ8âÆÑ€­0HÙ&RMINORZ
+CODE_SMELL
+–
+java:S11926"[Define a constant instead of duplicating this literal "please Login First As User" 5 times.(ò´¸òüÿÿÿÿ8™âÎÿ¬0Hô&RCRITICALZ
+CODE_SMELL
+
+java:S2293‘"YReplace the type specification in this constructor call with the diamond operator ("<>").(èÚ„®8âÆÑ€­0HÒ&RMINORZ
+CODE_SMELL
+	java:S100€"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÅÜê¥8Ì„¾€­0Hƒ'RMINORZ
+CODE_SMELL
+Z
+java:S1125‚"'Remove the unnecessary boolean literal.(ü‹Ø@8ï œµ­0Hæ)RMINORZ
+CODE_SMELL
+]
+java:S1481f"*Remove this unused "users" local variable.(‚§™¶8–ğÊ¬0Hâ&RMINORZ
+CODE_SMELL
+Œ
+java:S2293["YReplace the type specification in this constructor call with the diamond operator ("<>").(“èÜá8ëˆÉ¬0H'RMINORZ
+CODE_SMELL
+T
+java:S1116M"Remove this empty statement.(ÙŸãüÿÿÿÿ8ëˆÉ¬0Hû&RMINORZ
+CODE_SMELL
+Œ
+java:S22937"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ÿç¥é8å®İ¬¬0H×&RMINORZ
+CODE_SMELL
+Y
+java:S11255"'Remove the unnecessary boolean literal.(ü‹Ø@8ØšÎÿ¬0HÔ&RMINORZ
+CODE_SMELL
+y
+java:S4684v"@Replace this persistent entity with a simple POJO or DTO object.(¬ğËİ8†ößÕ¬0Hé&RCRITICALZVULNERABILITY
+_
+java:S1125x"'Remove the unnecessary boolean literal.(Ê®Ëğûÿÿÿÿ8®ÀŠ¸­0Hœ*RMINORZ
 CODE_SMELL

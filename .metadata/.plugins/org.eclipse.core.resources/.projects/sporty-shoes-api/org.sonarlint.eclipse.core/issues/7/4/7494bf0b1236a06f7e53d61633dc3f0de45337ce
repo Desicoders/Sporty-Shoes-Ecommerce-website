@@ -1,19 +1,16 @@
 
-_
-java:S1125""'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8Ëãò€­0H¡RMINORZ
+‘
+java:S22934"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ë…¬Ñøÿÿÿÿ8ÂæÔÒ¬0H¤RMINORZ
 CODE_SMELL
 ‘
-java:S2293&"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿‰äùÿÿÿÿ8Ï®­Ó¬0HëRMINORZ
+java:S2293%"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿‰äùÿÿÿÿ8Ï®­Ó¬0HRMINORZ
 CODE_SMELL
 ‘
-java:S2293*"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿‰äùÿÿÿÿ8ÂæÔÒ¬0HïRMINORZ
-CODE_SMELL
-~
-java:S1128	"FRemove this unused import 'org.springframework.stereotype.Repository'.(¦ıÍıüÿÿÿÿ8€¿èÔ¬0HéRMINORZ
-CODE_SMELL
-‘
-java:S22935"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ë…¬Ñøÿÿÿÿ8ÂæÔÒ¬0HíRMINORZ
+java:S2293)"YReplace the type specification in this constructor call with the diamond operator ("<>").(¿‰äùÿÿÿÿ8ÂæÔÒ¬0HŸRMINORZ
 CODE_SMELL
 _
-java:S11253"'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8œó€­0H«RMINORZ
+java:S1125!"'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8Ëãò€­0H¡RMINORZ
+CODE_SMELL
+_
+java:S11252"'Remove the unnecessary boolean literal.(×Û’ôøÿÿÿÿ8œó€­0H¦RMINORZ
 CODE_SMELL

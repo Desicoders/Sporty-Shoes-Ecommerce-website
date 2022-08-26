@@ -65,3 +65,5 @@ g
 7src/main/java/com/sporty/shoes/security/AdminLogin.java,7\b\7b161e1811cc0a4b99b1ba2558c1de70ae0877bc
 m
 =src/main/java/com/sporty/shoes/exceptions/UserLoginFirst.java,1\2\124be7b5247b9afb5112c5a69d5281dcd1b24f3f
+7
+HELP.md,1\a\1a273f73b7a477b0745593641bd708a6182c7ad5

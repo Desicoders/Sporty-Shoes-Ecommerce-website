@@ -1,8 +1,8 @@
 
+†	java:S116"ORename this field "Size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ•¯íúÿÿÿÿ8 ³€É¬0H¸RMINORZ
+CODE_SMELL
+s	java:S125 "<This block of commented-out lines of code should be removed.(à‡Ûøøÿÿÿÿ8 ³€É¬0H¹RMAJORZ
+CODE_SMELL
 q
-java:S1128	">Remove this unused import 'javax.validation.constraints.Size'.(›«´Ý8 ³€É¬0H¿RMINORZ
-CODE_SMELL
-s	java:S125 "<This block of commented-out lines of code should be removed.(à‡Ûøøÿÿÿÿ8 ³€É¬0H¾RMAJORZ
-CODE_SMELL
-†	java:S116"ORename this field "Size" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Œ•¯íúÿÿÿÿ8 ³€É¬0H½RMINORZ
+java:S1128	">Remove this unused import 'javax.validation.constraints.Size'.(›«´Ý8 ³€É¬0HºRMINORZ
 CODE_SMELL

@@ -69,12 +69,12 @@ public class UserController {
 		Orders order=new Orders();
 		order.setProduct(product);
 		order.setUsers(user);
-		orderServiceImpl.save(order);
+		order=orderServiceImpl.save(order);
 		
 		EntityModel<Orders> entityModel= EntityModel.of(order);
-		Method method=this.getClass().getMethod("getAllOrders",Integer.class);
+		Method method=this.getClass().getMethod("getAllOrders",null);
 		method.setAccessible(true);
-		Link linktoOrders =WebMvcLinkBuilder.linkTo(method,userLogin.getUserid()).withSelfRel();;
+		Link linktoOrders =WebMvcLinkBuilder.linkTo(method).withSelfRel();;
 		entityModel.add(linktoOrders);
 		
 		return new ResponseEntity<EntityModel<Orders>>(entityModel,HttpStatus.CREATED);

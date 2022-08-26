@@ -1,26 +1,26 @@
 
+`
+java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8¸¢Äı¬0HåRMINORZ
+CODE_SMELL
+p
+java:S1128"8Remove this unused import 'javax.persistence.JoinTable'.(ùö±µùÿÿÿÿ8¸¢Äı¬0HçRMINORZ
+CODE_SMELL
+w
+java:S1128"?Remove this unused import 'javax.validation.constraints.Email'.(¸àô¹üÿÿÿÿ8¸¢Äı¬0HéRMINORZ
+CODE_SMELL
 b
-java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8¸¢Äı¬0H´RMINORZ
+java:S1128"*Remove this unused import 'java.util.Set'.(ö²„¤şÿÿÿÿ8¸¢Äı¬0HëRMINORZ
+CODE_SMELL
+k
+java:S1128"9Remove this unused import 'javax.persistence.ManyToMany'.(Àğ½8¸¢Äı¬0HíRMINORZ
+CODE_SMELL
+z
+java:S1128"BRemove this unused import 'javax.validation.constraints.NotBlank'.(µã‡ıÿÿÿÿ8¸¢Äı¬0HïRMINORZ
+CODE_SMELL
+q
+java:S1128">Remove this unused import 'javax.validation.constraints.Size'.(›«´İ8¸¢Äı¬0HñRMINORZ
 CODE_SMELL
 l
 java:S1128
-"9Remove this unused import 'javax.persistence.JoinColumn'.(´Å¼á8¸¢Äı¬0H¶RMINORZ
-CODE_SMELL
-k
-java:S1128"9Remove this unused import 'javax.persistence.ManyToMany'.(Àğ½8¸¢Äı¬0HºRMINORZ
-CODE_SMELL
-w
-java:S1128"?Remove this unused import 'javax.validation.constraints.Email'.(¸àô¹üÿÿÿÿ8¸¢Äı¬0H¼RMINORZ
-CODE_SMELL
-q
-java:S1128">Remove this unused import 'javax.validation.constraints.Size'.(›«´İ8¸¢Äı¬0HÀRMINORZ
-CODE_SMELL
-`
-java:S1128".Remove this unused import 'java.util.HashSet'.(Ê‚êX8¸¢Äı¬0H²RMINORZ
-CODE_SMELL
-z
-java:S1128"BRemove this unused import 'javax.validation.constraints.NotBlank'.(µã‡ıÿÿÿÿ8¸¢Äı¬0H¾RMINORZ
-CODE_SMELL
-p
-java:S1128"8Remove this unused import 'javax.persistence.JoinTable'.(ùö±µùÿÿÿÿ8¸¢Äı¬0H¸RMINORZ
+"9Remove this unused import 'javax.persistence.JoinColumn'.(´Å¼á8¸¢Äı¬0HóRMINORZ
 CODE_SMELL
